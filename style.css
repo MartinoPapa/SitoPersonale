@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+html{
+    scroll-behavior: smooth
+}
+
+body{
+    font-family: 'Roboto' !important;
+}
+
+.ancora{
+    visibility: hidden;
+    position: absolute;
+    top: -50px;
+}
+
+.sezione{
+    position: relative;
+    background-color: white;
+    width: 90%;
+    padding: 0;
+    float: left;
+    margin: 2% 5% 0 5%;
+}
+
+.colonne-2{
+    position: relative;
+    width: 45%;
+    margin: 1% 2.5% 1% 2.5% !important;
+    text-align: left;
+    margin: 0;
+    float: left;
+    min-width: 400px;
+    border-bottom: 2px solid #62947c;
+    z-index: 1;
+}
+  
+.colonne-2 h2{
+    color: #49516f;
+}
+
+.footerHome{
+    position: absolute;
+    margin: 0;
+    bottom: -25px;
+    padding: 10px 20px 5px 20px;
+    background-color: white;
+    box-shadow: 0 0 15px -5px #49516f;
+    -webkit-box-shadow:  0 0 15px -5px #49516f;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.footerHome p, .footerHome span{
+    font-size: 30px !important;
+    font-weight: 600;
+    margin: 0;
+    color: #49516f;
+}
+
+.titolo{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.home{
+    position: relative;
+    height: 85vh;
+    background-color: #62947c !important;
+    padding: 0 5%;
+}
+
+.introduzione{
+    position: relative !important;
+    margin: 0;
+    width: 50%;
+    float: left;
+}
+
+.contatta{
+    text-align: center;
+    position: relative !important;
+    width: 50%;
+    float: left;
+    background-color: white;
+}
+
+.contatta select, h2, button{
+    margin: 10px 0px !important;
+}
+
+.contatta h2{
+    font-weight: 600;
+}
+
+.contatta select:focus, button:focus{
+    outline: none !important;
+}
+
+
+.contatta select{
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #49516f;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 8px;
+    width: 80%;
+}
+
+.contatta button{
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    padding: 10px;
+    color: #fff;
+    background-image: linear-gradient(90deg, #49516f, #62947c);
+    box-shadow: 0 0 15px -5px #49516f;
+    -webkit-box-shadow:  0 0 15px -5px #49516f;
+    transition: all 0.5s;
+}
+
+.contatta button:hover{
+    box-shadow: 0 0 15px 0px #49516f;
+    -webkit-box-shadow:  0 0 15px 0px #49516f;
+}
+
+.contatta .container{
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    border-radius: 30px;
+    height: 250px;
+    width: 70%;
+    box-shadow: 0 0 15px -5px #49516f;
+    -webkit-box-shadow:  0 0 15px -3px #49516f;
+}
+
+.sezione h1{
+    color: #49516f;
+    font-weight: 600;
+    font-size: 45px;
+}
+
+.introduzione p{
+    color: white;
+    padding: 5px 0px;
+    font-size: 25px;
+    margin: 0 0 0px 40px;
+}
+
+.introduzione span{
+    color: #49516f;
+}
+
+.barra{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: #49516f;
+}
+
+.centro{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.center-v {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.center-o {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.nav-c{
+    color: white;
+    font-weight: 500;
+}
+
+.nav-c a{
+    padding: 0 20px !important;
+    font-size: 17px;
+}
+
+.barra a{
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.nav-c a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+.nav-l h1{
+    padding: 0 !important;
+    margin: 0 5px !important;
+    color: white;
+}
+
+.nav-l{
+    left: 0;
+}
+
+
+.nav-r{
+    right: 0;
+}
+
+.barra .material-icons{
+    color: #fff;
+    font-size: 30px;
+}
+
+.nav-r input{
+    right: 110px;
+    transition: all 0.3s;
+    height: 30px;
+    font-size: 15px;
+    border: none;
+    padding: 0 10px;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+input:focus{
+    outline: none;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Ripetizioni</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="barra">
+        <div class="centro nav-c">
+            <a href="#offertaf">offerta formativa</a>
+            <a href="#insegnanti">insegnanti</a>
+            <a href="#">chi siamo?</a>
+            <a href="#">domande frequenti</a>
+        </div>
+        <div class="nav-l center-v">
+            <a href="#"><h1> TS <span class="material-icons">school</span></h1></a>
+        </div>
+        <div class="nav-r center-v">
+            <a href="tel: 3938885176" data-toggle="tooltip" data-placement="bottom" title="chiama"><span
+                    class="material-icons">phone</span></a>
+            <a href="#" data-toggle="tooltip" data-placement="bottom" title="contatta"><span
+                    class="material-icons">email</span></a>
+        </div>
+    </div>
+
+    <div class="home">
+        <div class="introduzione center-v">
+            <h1 class="titolo">TrentoSchool</h1>
+            <p><span class="material-icons">school</span> Lezioni private online e a domicilio</p>
+            <p><span class="material-icons">school</span> Insegnanti competenti</p>
+            <p><span class="material-icons">school</span> Prezzi accessibili</p>
+            <p><span class="material-icons">school</span> Scuole elementari, medie e superiori</p>
+        </div>
+        <div class="contatta center-v">
+            <div class="centro container">
+                <div class="centro" style="position: relative;">
+                    <h2>Contattaci</h2>
+                    <select id="materie">
+                        <option value="">materia</option>
+                        <option>matematica</option>
+                        <option>italiano</option>
+                        <option>storia</option>
+                        <option>inglese</option>
+                        <option>informatica</option>
+                        <option>altro</option>
+                    </select>
+                    <button>Cerca</button>
+                </div>
+            </div>
+        </div>
+        <div class="footerHome center-o">
+            <a href="tel: 3938885176" data-toggle="tooltip" data-placement="bottom" title="chiama"><span
+                    class="material-icons">phone</span></a>&nbsp&nbsp&nbsp&nbsp
+            <a href="#" data-toggle="tooltip" data-placement="bottom" title="contatta"><span
+                    class="material-icons">email</span></a>
+        </div>
+    </div>
+
+    <div class="sezione">
+        <div id="offertaf" class="ancora"></div>
+        <h1>Offerta formativa</h1>
+        <div class="colonne-2">
+            <h2>Matematica</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nihil, alias culpa consectetur fugit
+                ab iste nesciunt fugiat labore minima, veritatis optio. Cum, commodi tenetur? Corrupti assumenda
+                voluptatibus molestias est!</p>
+        </div>
+        <div class="colonne-2">
+            <h2>Italiano</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nihil, alias culpa consectetur fugit
+                ab iste nesciunt fugiat labore minima, veritatis optio. Cum, commodi tenetur? Corrupti assumenda
+                voluptatibus molestias est!</p>
+        </div>
+        <div class="colonne-2">
+            <h2>Storia</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nihil, alias culpa consectetur fugit
+                ab iste nesciunt fugiat labore minima, veritatis optio. Cum, commodi tenetur? Corrupti assumenda
+                voluptatibus molestias est!</p>
+        </div>
+        <div class="colonne-2">
+            <h2>Inglese</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nihil, alias culpa consectetur fugit
+                ab iste nesciunt fugiat labore minima, veritatis optio. Cum, commodi tenetur? Corrupti assumenda
+                voluptatibus molestias est!</p>
+        </div>
+        <div class="colonne-2">
+            <h2>Informatica</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nihil, alias culpa consectetur fugit
+                ab iste nesciunt fugiat labore minima, veritatis optio. Cum, commodi tenetur? Corrupti assumenda
+                voluptatibus molestias est!</p>
+        </div>
+        <div class="colonne-2">
+            <h2>Economia</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nihil, alias culpa consectetur fugit
+                ab iste nesciunt fugiat labore minima, veritatis optio. Cum, commodi tenetur? Corrupti assumenda
+                voluptatibus molestias est!</p>
+        </div>
+    </div>
+
+
+    <div class="sezione">
+        <div id="insegnanti" class="ancora"></div>
+        <h1>Insegnanti</h1>
+        <div class="colonne-2">
+            <h2>Martino</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nihil, alias culpa consectetur fugit
+                ab iste nesciunt fugiat labore minima, veritatis optio. Cum, commodi tenetur? Corrupti assumenda
+                voluptatibus molestias est!</p>
+        </div>
+        <div class="colonne-2">
+            <h2>Filippo</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nihil, alias culpa consectetur fugit
+                ab iste nesciunt fugiat labore minima, veritatis optio. Cum, commodi tenetur? Corrupti assumenda
+                voluptatibus molestias est!</p>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
