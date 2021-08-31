@@ -159,7 +159,7 @@
             </fieldset>
             <p>Messaggio (facoltativo)</p>
             <fieldset>
-                <textarea placeholder="messaggio" tabindex="5" id="Messaggio"></textarea>
+                <textarea placeholder="messaggio" tabindex="5" id="messaggio"></textarea>
             </fieldset>
             <fieldset>
                 <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Invia</button>
@@ -187,8 +187,10 @@
 
     emailjs.send('service_qnfrq9d', 'template_l5t6mhh', templateParams)
         .then(function (response) {
+            alert("messaggio inviato con successo");
             console.log('SUCCESS!', response.status, response.text);
         }, function (error) {
+            alert("sembra che qualcosa sia andato storto, si prega di riprovare");
             console.log('FAILED...', error);
         });
 }
