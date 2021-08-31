@@ -5,8 +5,59 @@ html{
     scroll-behavior: smooth
 }
 
+select:invalid { color: gray; }
+
+option{
+    color: #000;
+}
+
 body{
     font-family: 'Roboto' !important;
+}
+
+select, input, textarea{
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #49516f;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+select{
+    padding: 8px 3px;
+}
+
+#contact textarea{
+    resize: vertical;
+    height: 75px;
+}
+
+#contact p{
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
+
+#contact{
+    position: relative;
+    text-align: center;
+    width: 60%;
+    min-width: 400px;
+    padding: 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 15px -5px #49516f;
+    -webkit-box-shadow:  0 0 15px -3px #49516f;
+    border-radius: 20px;
+}
+
+#contact button, #contact input, #contact textarea, #contact select{
+    margin: 0 0 10px 0 !important;
+    width: 100%;
+}
+
+#contact h4{
+    text-align: left;
+    font-size: 30px;
 }
 
 .ancora{
@@ -88,7 +139,7 @@ body{
     background-color: white;
 }
 
-.contatta select, h2, button{
+.contatta select, .contatta h2, .contatta button{
     margin: 10px 0px !important;
 }
 
@@ -96,34 +147,30 @@ body{
     font-weight: 600;
 }
 
-.contatta select:focus, button:focus{
+select:focus, button:focus{
     outline: none !important;
 }
 
 
-.contatta select{
-    background-color: rgb(245, 245, 245);
-    border: 1px solid #49516f;
-    border-radius: 5px;
+.contatta select{   
     font-size: 18px;
-    padding: 8px;
     width: 80%;
 }
 
-.contatta button{
-    font-size: 18px;
+button{
+    font-size: 18px !important;
     border: none;
     border-radius: 5px;
     width: 80%;
     padding: 10px;
-    color: #fff;
+    color: #fff !important;
     background-image: linear-gradient(90deg, #49516f, #62947c);
     box-shadow: 0 0 15px -5px #49516f;
     -webkit-box-shadow:  0 0 15px -5px #49516f;
     transition: all 0.5s;
 }
 
-.contatta button:hover{
+button:hover{
     box-shadow: 0 0 15px 0px #49516f;
     -webkit-box-shadow:  0 0 15px 0px #49516f;
 }
@@ -147,7 +194,7 @@ body{
 
 .introduzione p{
     color: white;
-    padding: 5px 0px;
+    padding: 1% 0px;
     font-size: 25px;
     margin: 0 0 0px 40px;
 }

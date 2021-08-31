@@ -14,8 +14,8 @@
         <div class="centro nav-c">
             <a href="#offertaf">offerta formativa</a>
             <a href="#insegnanti">insegnanti</a>
-            <a href="#">chi siamo?</a>
             <a href="#">domande frequenti</a>
+            <a href="#">contatta</a>
         </div>
         <div class="nav-l center-v">
             <a href="#"><h1> TS <span class="material-icons">school</span></h1></a>
@@ -119,7 +119,80 @@
                 voluptatibus molestias est!</p>
         </div>
     </div>
+    <div class="sezione">
+        <h1>Contatta</h1>
+        <h4>richiedi informazioni o prenota i nostri servizi</h4>
+        <form id="contact" action="javascript:SendEmail()" class="center-o" method="post">
+            <p>Servizio richiesto</p>
+            <fieldset>
+                <select required id="servizio">
+                    <option value="" disabled selected hidden>Servizio richiesto</option>
+                    <option value="">Richiedi informazioni</option>
+                    <option>Prenota lezione online</option>
+                    <option>Prenota lezione domicilio</option>
+                </select>
+            </fieldset>
+            <p>Materia</p>
+            <fieldset>
+                <select required id="materia">
+                    <option value="" disabled selected hidden>Materia</option>
+                    <option>matematica</option>
+                        <option>italiano</option>
+                        <option>storia</option>
+                        <option>inglese</option>
+                        <option>informatica</option>
+                        <option>altro</option>
+                </select>
+            </fieldset>
+            <p>Nominativo</p>
+            <fieldset>
+                <input id="nominativo" placeholder="Nominativo" type="text" tabindex="1" required autofocus>
+            </fieldset>
+            <p>Indirizzo email</p>
+            <fieldset>
+                <input placeholder="Indirizzo email" id="email" type="email" tabindex="2" required>
+            </fieldset>
+            <p>Numero di telefono</p>
+            <fieldset>
+                <input placeholder="Numero di telefono" id="telefono" type="tel" tabindex="3" pattern="[0-9]{10}" title="inserisci un numero di telefono valido" required>
+            </fieldset>
+            <p>Messaggio (facoltativo)</p>
+            <fieldset>
+                <textarea placeholder="messaggio" tabindex="5" id="Messaggio"></textarea>
+            </fieldset>
+            <fieldset>
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Invia</button>
+            </fieldset>
+        </form>
+    </div>
 </body>
+
+<script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
+<script type="text/javascript">
+   function SendEmail(){
+    (function () {
+        emailjs.init("user_PQLnOPIqy0awCPfm5hZbS");
+    })();
+
+    var templateParams = {
+        tipo: document.getElementById("servizio").value,
+        materia: document.getElementById("materia").value,
+        nome: document.getElementById("nominativo").value,
+        email: document.getElementById("email").value,
+        telefono: document.getElementById("telefono").value,
+        messaggio: document.getElementById("messaggio").value
+    };
+
+    emailjs.send('service_qnfrq9d', 'template_l5t6mhh', templateParams)
+        .then(function (response) {
+            console.log('SUCCESS!', response.status, response.text);
+        }, function (error) {
+            console.log('FAILED...', error);
+        });
+}
+
+</script>
 
 <script>
     $(document).ready(function () {
