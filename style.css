@@ -5,6 +5,20 @@ html{
     scroll-behavior: smooth
 }
 
+.same-line{
+    width: 49%;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+.first{    
+    margin-right: 1%;
+}
+
+.second{
+   margin-left: 1%;
+}
+
 select:invalid { color: gray; }
 
 option{
@@ -41,7 +55,7 @@ select{
     position: relative;
     text-align: center;
     width: 60%;
-    min-width: 400px;
+    min-width: 300px;
     padding: 25px;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -51,7 +65,7 @@ select{
 }
 
 #contact button, #contact input, #contact textarea, #contact select{
-    margin: 0 0 10px 0 !important;
+    margin: 0 0 5px 0 !important;
     width: 100%;
     font-size: 15px !important;
 }
@@ -292,4 +306,37 @@ button:hover{
 
 input:focus{
     outline: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .introduzione{
+        width: 100%;
+    }
+
+
+    .contatta{
+        display: none;
+    }
+
+    .sezione h1{
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .colonne-2{
+        width: 95%;
+    }
+
+    .sezione h1{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .introduzione p{
+        font-size: 20px;
+        margin: 0 0 0 0;
+    }
+
 }

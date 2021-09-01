@@ -3,6 +3,7 @@
 <head>
     <title>Ripetizioni</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -34,7 +35,7 @@
             <p><span class="material-icons">school</span> Lezioni private online e a domicilio</p>
             <p><span class="material-icons">school</span> Insegnanti competenti</p>
             <p><span class="material-icons">school</span> Prezzi accessibili</p>
-            <p><span class="material-icons">school</span> Scuole elementari, medie e superiori</p>
+            <p><span class="material-icons">school</span> Elementari, medie e superiori</p>
         </div>
         <div class="contatta center-v">
             <div class="centro container">
@@ -132,17 +133,29 @@
                     <option>Prenota lezione online</option>
                     <option>Prenota lezione domicilio</option>
                 </select>
+            </fieldset>            
+            
+            <fieldset class="same-line first">
+                <p>Scuola</p>
+                <select  required id="scuola">
+                    <option value="" disabled selected hidden>Scuola</option>
+                        <option>Elementare</option>
+                        <option>Media</option>
+                        <option>Superiore</option>
+                        <option>Altro</option>
+                </select>
             </fieldset>
+            <fieldset class="same-line second">
             <p>Materia</p>
-            <fieldset>
-                <select required id="materia">
+
+                <select  required id="materia">
                     <option value="" disabled selected hidden>Materia</option>
-                    <option>matematica</option>
+                        <option>matematica</option>
                         <option>italiano</option>
                         <option>storia</option>
                         <option>inglese</option>
                         <option>informatica</option>
-                        <option>altro</option>
+                        <option>Altro</option>
                 </select>
             </fieldset>
             <p>Nominativo</p>
@@ -179,6 +192,7 @@
     var templateParams = {
         tipo: document.getElementById("servizio").value,
         materia: document.getElementById("materia").value,
+        scuola:  document.getElementById("scuola").value,
         nome: document.getElementById("nominativo").value,
         email: document.getElementById("email").value,
         telefono: document.getElementById("telefono").value,
@@ -187,7 +201,7 @@
 
     emailjs.send('service_qnfrq9d', 'template_l5t6mhh', templateParams)
         .then(function (response) {
-            alert("messaggio inviato con successo");
+            alert("messaggio inviato con successo, risponderemo il prima possibile");
             console.log('SUCCESS!', response.status, response.text);
         }, function (error) {
             alert("sembra che qualcosa sia andato storto, si prega di riprovare");
