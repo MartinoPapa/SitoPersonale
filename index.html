@@ -41,16 +41,13 @@
             <div class="centro container">
                 <div class="centro" style="position: relative;">
                     <h2>Contattaci</h2>
-                    <select id="materie">
-                        <option value="">materia</option>
-                        <option>matematica</option>
-                        <option>italiano</option>
-                        <option>storia</option>
-                        <option>inglese</option>
-                        <option>informatica</option>
-                        <option>altro</option>
+                    <select id="selectHome">
+                        <option value="" disabled selected hidden>Servizio richiesto</option>
+                        <option>Richiedi informazioni</option>
+                        <option>Prenota lezione online</option>
+                        <option>Prenota lezione domicilio</option>
                     </select>
-                    <button>Cerca</button>
+                    <button onclick="VaiOnclick()">Vai</button>
                 </div>
             </div>
         </div>
@@ -62,7 +59,7 @@
         </div>
     </div>
 
-    <div class="sezione">
+    <div class="sezione" id="firstSez">
         <div id="offertaf" class="ancora"></div>
         <h1>Offerta formativa</h1>
         <div class="colonne-2">
@@ -129,7 +126,7 @@
             <fieldset>
                 <select required id="servizio">
                     <option value="" disabled selected hidden>Servizio richiesto</option>
-                    <option value="">Richiedi informazioni</option>
+                    <option>Richiedi informazioni</option>
                     <option>Prenota lezione online</option>
                     <option>Prenota lezione domicilio</option>
                 </select>
@@ -213,6 +210,17 @@
 
 <script>
     $(document).ready(function () {
+        location.href = "#";
         $('[data-toggle="tooltip"]').tooltip();
     });
+
+    function VaiOnclick(){
+        if(document.getElementById("selectHome").selectedIndex!=0){
+            document.getElementById("servizio").selectedIndex = document.getElementById("selectHome").selectedIndex;
+            location.href = "#contatta";
+        }else{
+            alert("è prima necessario selezionare un servizio");
+        }
+        
+    }
 </script>

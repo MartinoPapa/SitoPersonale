@@ -255,6 +255,8 @@ button:hover{
 .nav-c{
     color: white;
     font-weight: 500;
+    width: 100%;
+    text-align: center;
 }
 
 .nav-c a{
@@ -318,6 +320,10 @@ input:focus{
         display: none;
     }
 
+    .nav-c{
+        display: none;
+    }
+
     .sezione h1{
         font-size: 35px;
     }
@@ -330,6 +336,10 @@ input:focus{
 
     .sezione h1{
         font-size: 30px;
+    }
+
+    #firstSez{
+        margin-top: 30px;
     }
 }
 
