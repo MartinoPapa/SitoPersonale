@@ -351,7 +351,7 @@ input:focus{
 
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
     #burger{
         display: none;
     }
@@ -382,7 +382,7 @@ input:focus{
     border-top: 0px solid #fff;
     overflow: hidden;
     height: 0;
-    transition: all 0.5s;
+    transition: all 0.2s;
 }
 
 #barraTelefono p{
