@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Ripetizioni</title>
+    <title>TrentoSchool</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -15,18 +15,28 @@
         <div class="centro nav-c">
             <a href="#offertaf">offerta formativa</a>
             <a href="#insegnanti">insegnanti</a>
-            <a href="#">domande frequenti</a>
+            <a href="#domande">domande frequenti</a>
             <a href="#contatta">contatta</a>
         </div>
         <div class="nav-l center-v">
-            <a href="#"><h1> TS <span class="material-icons">school</span></h1></a>
+            <a href="#">
+                <h1> TS <span class="material-icons">school</span></h1>
+            </a>
         </div>
         <div class="nav-r center-v">
             <a href="tel: 3938885176" data-toggle="tooltip" data-placement="bottom" title="chiama"><span
                     class="material-icons">phone</span></a>
             <a href="#contatta" data-toggle="tooltip" data-placement="bottom" title="contatta"><span
                     class="material-icons">email</span></a>
+            <a id="burger" onclick="burgerOnclick()"><span class="material-icons">menu</span></a>
         </div>
+    </div>
+
+    <div id="barraTelefono">
+        <p><a href="#offertaf">offerta formativa</a></p>
+        <p><a href="#insegnanti">insegnanti</a></p>
+        <p><a href="#domande">domande frequenti</a></p>
+        <p><a href="#contatta">contatta</a></p>
     </div>
 
     <div class="home">
@@ -75,7 +85,7 @@
                 voluptatibus molestias est!</p>
         </div>
         <div class="colonne-2">
-            <h2>Storia</h2>
+            <h2>Diritto</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nihil, alias culpa consectetur fugit
                 ab iste nesciunt fugiat labore minima, veritatis optio. Cum, commodi tenetur? Corrupti assumenda
                 voluptatibus molestias est!</p>
@@ -118,6 +128,10 @@
         </div>
     </div>
     <div class="sezione">
+        <div id="domande" class="ancora"></div>
+        <h1>Domande frequenti</h1>
+    </div>
+    <div class="sezione">
         <div id="contatta" class="ancora"></div>
         <h1>Contatta</h1>
         <h4>richiedi informazioni o prenota i nostri servizi</h4>
@@ -130,29 +144,30 @@
                     <option>Prenota lezione online</option>
                     <option>Prenota lezione domicilio</option>
                 </select>
-            </fieldset>            
-            
+            </fieldset>
+
             <fieldset class="same-line first">
                 <p>Scuola</p>
-                <select  required id="scuola">
+                <select required id="scuola">
                     <option value="" disabled selected hidden>Scuola</option>
-                        <option>Elementare</option>
-                        <option>Media</option>
-                        <option>Superiore</option>
-                        <option>Altro</option>
+                    <option>Elementare</option>
+                    <option>Media</option>
+                    <option>Superiore</option>
+                    <option>Altro</option>
                 </select>
             </fieldset>
             <fieldset class="same-line second">
-            <p>Materia</p>
+                <p>Materia</p>
 
-                <select  required id="materia">
+                <select required id="materia">
                     <option value="" disabled selected hidden>Materia</option>
-                        <option>matematica</option>
-                        <option>italiano</option>
-                        <option>storia</option>
-                        <option>inglese</option>
-                        <option>informatica</option>
-                        <option>Altro</option>
+                    <option>Matematica</option>
+                    <option>Italiano</option>
+                    <option>Inglese</option>
+                    <option>Informatica</option>
+                    <option>Economia</option>
+                    <option>Diritto</option>
+                    <option>Altro</option>
                 </select>
             </fieldset>
             <p>Nominativo</p>
@@ -165,7 +180,8 @@
             </fieldset>
             <p>Numero di telefono</p>
             <fieldset>
-                <input placeholder="Numero di telefono" id="telefono" type="tel" tabindex="3" pattern="[0-9]{10}" title="inserisci un numero di telefono valido" required>
+                <input placeholder="Numero di telefono" id="telefono" type="tel" tabindex="3" pattern="[0-9]{10}"
+                    title="inserisci un numero di telefono valido" required>
             </fieldset>
             <p>Messaggio (facoltativo)</p>
             <fieldset>
@@ -178,33 +194,40 @@
     </div>
 </body>
 
-<script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 
 <script type="text/javascript">
-   function SendEmail(){
-    (function () {
-        emailjs.init("user_PQLnOPIqy0awCPfm5hZbS");
-    })();
+    function SendEmail() {
+        (function () {
+            emailjs.init("user_PQLnOPIqy0awCPfm5hZbS");
+        })();
 
-    var templateParams = {
-        tipo: document.getElementById("servizio").value,
-        materia: document.getElementById("materia").value,
-        scuola:  document.getElementById("scuola").value,
-        nome: document.getElementById("nominativo").value,
-        email: document.getElementById("email").value,
-        telefono: document.getElementById("telefono").value,
-        messaggio: document.getElementById("messaggio").value
-    };
+        var button = document.getElementById("contact-submit");
+        button.disabled = true;
+        button.innerHTML = `Attendere...`;
 
-    emailjs.send('service_qnfrq9d', 'template_l5t6mhh', templateParams)
-        .then(function (response) {
-            alert("messaggio inviato con successo, risponderemo il prima possibile");
-            console.log('SUCCESS!', response.status, response.text);
-        }, function (error) {
-            alert("sembra che qualcosa sia andato storto, si prega di riprovare");
-            console.log('FAILED...', error);
-        });
-}
+        var templateParams = {
+            tipo: document.getElementById("servizio").value,
+            materia: document.getElementById("materia").value,
+            scuola: document.getElementById("scuola").value,
+            nome: document.getElementById("nominativo").value,
+            email: document.getElementById("email").value,
+            telefono: document.getElementById("telefono").value,
+            messaggio: document.getElementById("messaggio").value
+        };
+
+        emailjs.send('service_qnfrq9d', 'template_l5t6mhh', templateParams)
+            .then(function (response) {
+                button.innerHTML = `Messaggio inviato!`;
+                console.log('SUCCESS!', response.status, response.text);
+            }, function (error) {
+                alert("sembra che qualcosa sia andato storto, si prega di riprovare");
+                button.innerHTML = `Invia`;
+                console.log('FAILED...', error);
+            });
+
+        button.disabled = false;
+    }
 
 </script>
 
@@ -214,13 +237,29 @@
         $('[data-toggle="tooltip"]').tooltip();
     });
 
-    function VaiOnclick(){
-        if(document.getElementById("selectHome").selectedIndex!=0){
+    function VaiOnclick() {
+        if (document.getElementById("selectHome").selectedIndex != 0) {
             document.getElementById("servizio").selectedIndex = document.getElementById("selectHome").selectedIndex;
             location.href = "#contatta";
-        }else{
+        } else {
             alert("è prima necessario selezionare un servizio");
         }
-        
+
+    }
+
+    var open = false;
+
+    function burgerOnclick() {
+        var menu = document.getElementById("barraTelefono");
+        if(open){
+            menu.style.height="0";
+            menu.style.borderTop="0px solid #fff";
+        }
+        else{
+            menu.style.borderTop="1px solid #fff";
+            menu.style.height="163px";
+            
+        }
+        open=!open;
     }
 </script>
