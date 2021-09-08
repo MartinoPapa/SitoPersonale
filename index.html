@@ -28,15 +28,15 @@
                     class="material-icons">phone</span></a>
             <a href="#contatta" data-toggle="tooltip" data-placement="bottom" title="contatta"><span
                     class="material-icons">email</span></a>
-            <a id="burger" onclick="burgerOnclick()"><span class="material-icons">menu</span></a>
+            <a id="burger" onclick="burgerOnclick()"><span class="material-icons" id="burgerIco">menu</span></a>
         </div>
     </div>
 
     <div id="barraTelefono">
-        <p><a href="#offertaf">offerta formativa</a></p>
-        <p><a href="#insegnanti">insegnanti</a></p>
-        <p><a href="#domande">domande frequenti</a></p>
-        <p><a href="#contatta">contatta</a></p>
+        <p><a href="#offertaf" onclick="burgerOnclick()">offerta formativa</a></p>
+        <p><a href="#insegnanti" onclick="burgerOnclick()">insegnanti</a></p>
+        <p><a href="#domande" onclick="burgerOnclick()">domande frequenti</a></p>
+        <p><a href="#contatta" onclick="burgerOnclick()">contatta</a></p>
     </div>
 
     <div class="home">
@@ -251,14 +251,16 @@
 
     function burgerOnclick() {
         var menu = document.getElementById("barraTelefono");
+        var icona = document.getElementById("burgerIco");
         if(open){
             menu.style.height="0";
             menu.style.borderTop="0px solid #fff";
+            icona.innerHTML="menu";
         }
         else{
             menu.style.borderTop="1px solid #fff";
             menu.style.height="163px";
-            
+            icona.innerHTML="close";
         }
         open=!open;
     }
