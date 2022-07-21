@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>TrentoSchool</title>
+    <title>Martino Papa</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -16,6 +16,7 @@
             <a href="#curriculum">curriculum</a>
             <a href="#domande">domande frequenti</a>
             <a href="#contatta">contatta</a>
+            <a href="ripetizioniEstive.html">recupero debiti</a>
         </div>
         <div class="nav-l center-v">
             <a href="#">
@@ -35,6 +36,7 @@
         <p><a href="#curriculum" onclick="burgerOnclick()">curriculum</a></p>
         <p><a href="#domande" onclick="burgerOnclick()">domande frequenti</a></p>
         <p><a href="#contatta" onclick="burgerOnclick()">contatta</a></p>
+        <p><a href="ripetizioniEstive.html">recupero debiti</a></p>
     </div>
 
     <div class="home">
@@ -53,7 +55,7 @@
                         <option value="" disabled selected hidden>Servizio richiesto</option>
                         <option>Ripetizioni private</option>
                         <option>Creazione sito web</option>
-                        <option>Altro</option>
+                        <option>Richiedi informazioni</option>
                     </select>
                     <button onclick="VaiOnclick()">Vai</button>
                 </div>
@@ -70,7 +72,10 @@
     <div class="sezione">
         <div id="curriculum" class="ancora"></div>
         <h1>Curriculum</h1>
-        
+        <object data="CV.pdf" type="application/pdf" width="100%" height="600">
+            <p><a href="CV.pdf">scarica il pdf</a></p>
+        </object>
+
     </div>
     <div class="sezione">
         <div id="domande" class="ancora"></div>
@@ -112,39 +117,41 @@
     <div class="sezione">
         <div id="contatta" class="ancora"></div>
         <h1>Contatta</h1>
-        <h4>Richiedi informazioni direttamente dal sito web! Risponderò prima possibile.</h4>
+        <h4>Richiedi informazioni direttamente dal sito web! Risponderò il prima possibile.</h4>
         <form id="contact" action="javascript:SendEmail()" class="center-o" method="post">
             <p>Servizio richiesto</p>
             <fieldset>
-                <select required id="servizio">
+                <select required id="servizio" onchange="CambiaContatta()">
                     <option value="" disabled selected hidden>Servizio richiesto</option>
                     <option>Ripetizioni private</option>
                     <option>Creazione sito web</option>
-                    <option>Altro</option>
+                    <option>Richiedi informazioni</option>
                 </select>
             </fieldset>
 
-            <fieldset class="same-line first">
-                <p>Scuola</p>
-                <select required id="scuola">
-                    <option value="" disabled selected hidden>Scuola</option>
-                    <option>Elementare</option>
-                    <option>Media</option>
-                    <option>Superiore</option>
-                    <option>Altro</option>
-                </select>
-            </fieldset>
-            <fieldset class="same-line second">
-                <p>Materia</p>
+            <div id="sezioneScuola">
+                <fieldset class="same-line first">
+                    <p>Scuola</p>
+                    <select required id="scuola">
+                        <option value="" disabled selected hidden>Scuola</option>
+                        <option>Elementare</option>
+                        <option>Media</option>
+                        <option>Superiore</option>
+                        <option>Altro</option>
+                    </select>
+                </fieldset>
+                <fieldset class="same-line second">
+                    <p>Materia</p>
 
-                <select required id="materia">
-                    <option value="" disabled selected hidden>Materia</option>
-                    <option>Matematica</option>
-                    <option>Informatica</option>
-                    <option>Fisica</option>
-                    <option>Altro</option>
-                </select>
-            </fieldset>
+                    <select required id="materia">
+                        <option value="" disabled selected hidden>Materia</option>
+                        <option>Matematica</option>
+                        <option>Informatica</option>
+                        <option>Fisica</option>
+                        <option>Altro</option>
+                    </select>
+                </fieldset>
+            </div>
             <p>Nominativo</p>
             <fieldset>
                 <input id="nominativo" placeholder="Nominativo" type="text" tabindex="1" required autofocus>
@@ -158,7 +165,7 @@
                 <input placeholder="Numero di telefono" id="telefono" type="tel" tabindex="3" pattern="[0-9]{10}"
                     title="inserisci un numero di telefono valido" required>
             </fieldset>
-            <p>Messaggio (facoltativo)</p>
+            <p>Messaggio</p>
             <fieldset>
                 <textarea placeholder="messaggio" tabindex="5" id="messaggio"></textarea>
             </fieldset>
@@ -166,6 +173,14 @@
                 <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Invia</button>
             </fieldset>
         </form>
+        <h4>Oppure puoi contattarmi tramite:</h4>
+        <p>
+            Telefono: <a href="tel: 3938885176">393 888 5176</a> <br>
+            Email: martino.papa.tn@gmail.com
+        </p>
+    </div>
+    <div id="footer">
+
     </div>
 </body>
 
@@ -219,7 +234,17 @@
         } else {
             location.href = "#contatta";
         }
+        CambiaContatta();
+    }
 
+    function CambiaContatta(){
+        if(document.getElementById("servizio").selectedIndex!=1){
+            document.getElementById("sezioneScuola").style.display = "none";
+        }
+        else{
+            document.getElementById("sezioneScuola").style.display = "inline";
+        }
+        //sezioneScuola
     }
 
     var open = false;
