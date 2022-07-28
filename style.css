@@ -391,6 +391,7 @@ input:focus{
     overflow: hidden;
     height: 0;
     transition: all 0.2s;
+    padding: 0;
 }
 
 #barraTelefono p{
