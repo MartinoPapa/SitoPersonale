@@ -327,6 +327,10 @@ input:focus{
     .sezione h1{
         font-size: 35px;
     }
+
+    #contact{
+        width: 70%;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -347,6 +351,10 @@ input:focus{
     .introduzione p{
         font-size: 20px;
         margin: 0 0 0 0;
+    }
+
+    #contact{
+        width: 80%;
     }
 
 }       
@@ -392,4 +400,10 @@ input:focus{
 
 #barraTelefono a{
     color: white;
+}
+
+#pdfCur{
+    border-radius: 20px;
+    box-shadow: 0 0 15px -5px #49516f;
+    -webkit-box-shadow:  0 0 15px -3px #49516f;
 }
