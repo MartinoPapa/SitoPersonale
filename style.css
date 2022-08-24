@@ -31,7 +31,7 @@ body{
 
 select, input, textarea{
     background-color: rgb(245, 245, 245);
-    border: 1px solid #49516f;
+    border: 1px solid #4b5870;
     border-radius: 5px;
     padding: 8px;
 }
@@ -59,8 +59,8 @@ select{
     padding: 25px;
     margin-top: 50px;
     margin-bottom: 50px;
-    box-shadow: 0 0 15px -5px #49516f;
-    -webkit-box-shadow:  0 0 15px -3px #49516f;
+    box-shadow: 0 0 15px -5px #4b5870;
+    -webkit-box-shadow:  0 0 15px -3px #4b5870;
     border-radius: 20px;
 }
 
@@ -102,7 +102,7 @@ select{
 }
   
 .colonne-2 h2{
-    color: #49516f;
+    color: #4b5870;
 }
 
 .footerHome{
@@ -111,8 +111,8 @@ select{
     bottom: -25px;
     padding: 10px 20px 5px 20px;
     background-color: white;
-    box-shadow: 0 0 15px -5px #49516f;
-    -webkit-box-shadow:  0 0 15px -5px #49516f;
+    box-shadow: 0 0 15px -5px #4b5870;
+    -webkit-box-shadow:  0 0 15px -5px #4b5870;
     border-radius: 10px;
     z-index: 2;
 }
@@ -121,7 +121,7 @@ select{
     font-size: 30px !important;
     font-weight: 600;
     margin: 0;
-    color: #49516f;
+    color: #4b5870;
 }
 
 .titolo{
@@ -178,15 +178,15 @@ button{
     width: 80%;
     padding: 10px;
     color: #fff !important;
-    background-image: linear-gradient(90deg, #49516f, #62947c);
-    box-shadow: 0 0 15px -5px #49516f;
-    -webkit-box-shadow:  0 0 15px -5px #49516f;
+    background-image: linear-gradient(90deg, #4b5870, #62947c);
+    box-shadow: 0 0 15px -5px #4b5870;
+    -webkit-box-shadow:  0 0 15px -5px #4b5870;
     transition: all 0.5s;
 }
 
 button:hover{
-    box-shadow: 0 0 15px 0px #49516f;
-    -webkit-box-shadow:  0 0 15px 0px #49516f;
+    box-shadow: 0 0 15px 0px #4b5870;
+    -webkit-box-shadow:  0 0 15px 0px #4b5870;
 }
 
 .contatta .container{
@@ -196,12 +196,12 @@ button:hover{
     border-radius: 30px;
     height: 250px;
     width: 70%;
-    box-shadow: 0 0 15px -5px #49516f;
-    -webkit-box-shadow:  0 0 15px -3px #49516f;
+    box-shadow: 0 0 15px -5px #4b5870;
+    -webkit-box-shadow:  0 0 15px -3px #4b5870;
 }
 
 .sezione h1{
-    color: #49516f;
+    color: #4b5870;
     font-weight: 600;
     font-size: 45px;
 }
@@ -214,7 +214,7 @@ button:hover{
 }
 
 .introduzione span{
-    color: #49516f;
+    color: #4b5870;
 }
 
 .barra{
@@ -224,7 +224,7 @@ button:hover{
     z-index: 999;
     top: 0;
     left: 0;
-    background-color: #49516f;
+    background-color: #4b5870;
 }
 
 .centro{
@@ -242,6 +242,15 @@ button:hover{
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+
+.center{
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .center-o {
@@ -381,13 +390,11 @@ input:focus{
 
 #barraTelefono{
     position: fixed;
-    top: 60px;
     left: 0;
     width: 100%;
-    background-color: #49516f;
+    background-image: linear-gradient(180deg, #49516f, #62947c);
     z-index: 998;
     text-align: center;
-    border-top: 0px solid #fff;
     overflow: hidden;
     height: 0;
     transition: all 0.2s;
@@ -395,16 +402,26 @@ input:focus{
 }
 
 #barraTelefono p{
-    margin: 10px;
-    font-size: 20px;
+    margin: 15px 0;
+    font-size: 25px;
 }
 
 #barraTelefono a{
-    color: white;
+    color: #fff;
+    
 }
 
 #pdfCur{
     border-radius: 20px;
-    box-shadow: 0 0 15px -5px #49516f;
-    -webkit-box-shadow:  0 0 15px -3px #49516f;
+    box-shadow: 0 0 15px -5px #4b5870;
+    -webkit-box-shadow:  0 0 15px -3px #4b5870;
+}
+
+#footer{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 0 15px -5px #4b5870;
+    -webkit-box-shadow:  0 0 15px -3px #4b5870;
+    margin: 20px 0 0 0px;
 }

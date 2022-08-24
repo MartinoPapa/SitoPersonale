@@ -16,8 +16,8 @@
         <div class="centro nav-c">
             <a href="#curriculum">curriculum</a>
             <a href="#domande">domande frequenti</a>
+            <a href="#appunti">appunti</a>
             <a href="#contatta">contatta</a>
-            <!--<a href="ripetizioniEstive.html">recupero debiti</a>-->
         </div>
         <div class="nav-l center-v">
             <a href="#">
@@ -34,10 +34,12 @@
     </div>
 
     <div id="barraTelefono">
-        <p><a href="#curriculum" onclick="burgerOnclick()">curriculum</a></p>
+        <div class="centro" style="width: 100%;">
+            <p><a href="#curriculum" onclick="burgerOnclick()">curriculum</a></p>
         <p><a href="#domande" onclick="burgerOnclick()">domande frequenti</a></p>
+        <p><a href="#appunti" onclick="burgerOnclick()">appunti</a></p>
         <p><a href="#contatta" onclick="burgerOnclick()">contatta</a></p>
-        <!--<p><a href="ripetizioniEstive.html">recupero debiti</a></p>-->
+        </div>
     </div>
 
     <div class="home">
@@ -54,7 +56,7 @@
                     <h2>Contattami</h2>
                     <select id="selectHome">
                         <option value="" disabled selected hidden>Servizio richiesto</option>
-                        <option>Ripetizioni private</option>
+                        <option>Ripetizioni</option>
                         <option>Creazione sito web</option>
                         <option>Richiedi informazioni</option>
                     </select>
@@ -103,6 +105,10 @@
         </div>
     </div>
     <div class="sezione">
+        <div id="appunti" class="ancora"></div>
+        <h1>Appunti</h1>
+    </div>
+    <div class="sezione">
         <div id="contatta" class="ancora"></div>
         <h1>Contatta</h1>
         <h4>Richiedi informazioni direttamente dal sito web! Risponderò il prima possibile.</h4>
@@ -111,7 +117,7 @@
             <fieldset>
                 <select required id="servizio" onchange="CambiaContatta()">
                     <option value="" disabled selected hidden>Servizio richiesto</option>
-                    <option>Ripetizioni private</option>
+                    <option>Ripetizioni</option>
                     <option>Creazione sito web</option>
                     <option>Richiedi informazioni</option>
                 </select>
@@ -168,8 +174,10 @@
             Email: martino.papa.tn@gmail.com
         </p>
     </div>
-    <div id="footer">
-
+    <div id="footer" class="sezione">
+        <div class="center">
+            Martino Papa
+        </div>
     </div>
 </body>
 
@@ -206,7 +214,7 @@
             });
 
         button.disabled = false;
-    }
+    } 
 
 </script>
 
@@ -243,12 +251,10 @@
         var icona = document.getElementById("burgerIco");
         if (open) {
             menu.style.height = "0";
-            menu.style.borderTop = "0px solid #fff";
             icona.innerHTML = "menu";
         }
         else {
-            menu.style.borderTop = "2px solid #fff";
-            menu.style.height = "130px";
+            menu.style.height = "100%";
             icona.innerHTML = "close";
         }
         open = !open;
