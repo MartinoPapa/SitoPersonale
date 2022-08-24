@@ -350,10 +350,6 @@ input:focus{
     .sezione h1{
         font-size: 30px;
     }
-
-    #firstSez{
-        margin-top: 30px;
-    }
 }
 
 @media screen and (max-width: 550px) {
@@ -364,6 +360,10 @@ input:focus{
 
     #contact{
         width: 80%;
+    }
+
+    #primo{
+        margin-top: 30px;
     }
 
 }       
@@ -393,12 +393,13 @@ input:focus{
     left: 0;
     width: 100%;
     background-image: linear-gradient(180deg, #49516f, #62947c);
-    z-index: 998;
+    z-index: 0;
     text-align: center;
     overflow: hidden;
-    height: 0;
-    transition: all 0.2s;
+    height: 100%;
+    opacity: .0;
     padding: 0;
+    transition: all 0.1s;
 }
 
 #barraTelefono p{
