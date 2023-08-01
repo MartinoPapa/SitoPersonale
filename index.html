@@ -133,7 +133,7 @@
         <form id="contact" class="center-o" name="contact" method="POST" data-netlify="true">
             <p>Servizio richiesto</p>
             <fieldset>
-                <select required id="servizio" onchange="CambiaContatta()">
+                <select required id="servizio" onchange="CambiaContatta()" name="servizio_richiesto">
                     <option value="" disabled selected hidden>Servizio richiesto</option>
                     <option>Ripetizioni</option>
                     <option>Creazione sito web</option>
@@ -144,7 +144,7 @@
             <div id="sezioneScuola">
                 <fieldset class="same-line first">
                     <p>Scuola</p>
-                    <select id="scuola">
+                    <select id="scuola" name="scuola">
                         <option value="" disabled selected hidden>Scuola</option>
                         <option>Elementare</option>
                         <option>Media</option>
@@ -155,7 +155,7 @@
                 <fieldset class="same-line second">
                     <p>Materia</p>
 
-                    <select id="materia">
+                    <select id="materia" name="materia">
                         <option value="" disabled selected hidden>Materia</option>
                         <option>Matematica</option>
                         <option>Informatica</option>
@@ -167,7 +167,7 @@
             </div>
             <p>Nominativo</p>
             <fieldset>
-                <input id="nominativo" placeholder="Nominativo" type="text" tabindex="1" required>
+                <input name="nominativo" id="nominativo" placeholder="Nominativo" type="text" tabindex="1" required>
             </fieldset>
             <p>Indirizzo email</p>
             <fieldset>
@@ -175,12 +175,12 @@
             </fieldset>
             <p>Numero di telefono</p>
             <fieldset>
-                <input placeholder="Numero di telefono" id="telefono" type="tel" tabindex="3" pattern="[0-9]{10}"
+                <input name="telefono placeholder="Numero di telefono" id="telefono" type="tel" tabindex="3" pattern="[0-9]{10}"
                     title="inserisci un numero di telefono valido" required>
             </fieldset>
             <p>Messaggio</p>
             <fieldset>
-                <textarea placeholder="messaggio" tabindex="5" id="messaggio"></textarea>
+                <textarea name="messaggio" placeholder="messaggio" tabindex="5" id="messaggio"></textarea>
             </fieldset>
             <fieldset>
                 <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Invia</button>
