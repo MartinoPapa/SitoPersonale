@@ -130,7 +130,7 @@
         <div id="contatta" class="ancora"></div>
         <h1>Contatta</h1>
         <h4>Richiedi informazioni direttamente dal sito web! Risponderò il prima possibile.</h4>
-        <form id="contact" class="center-o" method="post" netlify>
+        <form id="contact" class="center-o" name="contact" method="POST" data-netlify="true">
             <p>Servizio richiesto</p>
             <fieldset>
                 <select required id="servizio" onchange="CambiaContatta()">
@@ -171,7 +171,7 @@
             </fieldset>
             <p>Indirizzo email</p>
             <fieldset>
-                <input placeholder="Indirizzo email" id="email" type="email" tabindex="2" required>
+                <input placeholder="Indirizzo email" id="email" type="email" name="email" tabindex="2" required>
             </fieldset>
             <p>Numero di telefono</p>
             <fieldset>
