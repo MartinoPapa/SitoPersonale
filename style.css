@@ -340,6 +340,10 @@ input:focus{
     #contact{
         width: 70%;
     }
+
+    #primo{
+        margin-top: 40px;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -360,10 +364,6 @@ input:focus{
 
     #contact{
         width: 80%;
-    }
-
-    #primo{
-        margin-top: 30px;
     }
 
 }       
